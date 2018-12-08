@@ -11,13 +11,9 @@ public class ConnectionHelper
 	private static ConnectionHelper instance;
 
 	private ConnectionHelper()
-	{
-    	String driver = null;
+	{   	
 		try {
 			Class.forName("com.mysql.jdbc.Driver");		
-            driver = "com.mysql.jdbc.Driver";
-            Class.forName(driver);
-            url = "jdbc:mysql://localhost/property?user=root";
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
